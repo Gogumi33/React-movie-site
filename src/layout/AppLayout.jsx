@@ -1,5 +1,4 @@
 // 네비게이션 바
-
 import React from "react";
 
 import Button from "react-bootstrap/Button";
@@ -10,8 +9,12 @@ import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
 import { Outlet } from "react-router-dom";
 
+import png from "../assets/netflix.PNG";
+
 // bg="dark" variant="dark" 다크모드
 // className="bg-body-tertiary"
+
+// 넷플릭스 로고 링크 - https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png
 
 const AppLayout = () => {
   return (
@@ -20,7 +23,7 @@ const AppLayout = () => {
         <Container fluid>
           <Navbar.Brand href="/">
             <img
-              src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+              src={png}
               alt="netfilx logo"
               width={100}
             />
