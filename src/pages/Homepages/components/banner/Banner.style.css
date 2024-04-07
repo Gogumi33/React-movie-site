@@ -1,0 +1,27 @@
+.banner {
+    margin: 0;
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.banner:before {
+    content: '';
+    background: linear-gradient(to top, black, transparent);
+    position: absolute;
+    left: 0;
+    height: 80vh;
+    width: 100%;
+}
+.banner-text-area {
+    width: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+/* 배너 텍스트 아리아 밑에있는 모든 애들을 들고와서 우선순위를 높인다. */
+.banner-text-area > * {
+    z-index: 2;
+}

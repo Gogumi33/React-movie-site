@@ -1,5 +1,5 @@
 // API 받아오기 위한 파일
-import { Axios } from "axios";
+import axios from "axios";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 

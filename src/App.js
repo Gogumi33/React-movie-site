@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import AppLayout from './layout/AppLayout';
 import Homepage from './pages/Homepages/Homepage';
@@ -19,23 +18,18 @@ function App() {
   // AppLayout 마저 라우트에 넣어서 네브바조차 바꿀 수 있게 만든다.
   return (
     <Routes>
-      <Route path="/" element={<AppLayout/>}>
-        <Route index elememt={<Homepage/>}/>
-
+      <Route path="/" element={<AppLayout />}>
+        <Route index element={<Homepage />} />
         <Route path="movies">
-          <Route index element={<MoviePage/>}/>
-          <Route path=":id" element={<MovieDetailPage/>}/>
+          <Route index element={<MoviePage />} />
+          <Route path=":id" element={<MovieDetailPage />} />
         </Route>
-
-        {/* <Route path="/movies" elememt={<Moviepage/>}/>
-        <Route path="/movies/:id" elememt={<MovieDetailPage/>}/> */}
       </Route>
-
-
-      <Route path="*" element={<ErrorPage/>}/>
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }
+
 
 
 export default App;

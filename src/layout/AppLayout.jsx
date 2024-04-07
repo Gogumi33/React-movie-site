@@ -7,7 +7,7 @@ import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 import { Outlet } from "react-router-dom";
 
 // bg="dark" variant="dark" 다크모드
@@ -15,14 +15,14 @@ import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   return (
-    <div>
-      <Navbar expand="lg" bg="dark" variant="dark">
+    <div style={{background: 'black', color:'white'}}>
+      <Navbar data-bs-theme="dark" expand="lg" className="bg-body-tertiary navigation_bar">
         <Container fluid>
           <Navbar.Brand href="/">
             <img
-                src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
-                alt="netfilx logo"
-                width={100}
+              src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+              alt="netfilx logo"
+              width={100}
             />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
