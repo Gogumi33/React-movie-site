@@ -1,6 +1,6 @@
 .banner {
     margin: 0;
-    height: 80vh;
+    height: 65vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,7 +10,7 @@
     background: linear-gradient(to top, black, transparent);
     position: absolute;
     left: 0;
-    height: 80vh;
+    height: 65vh;
     width: 100%;
 }
 .banner-text-area {

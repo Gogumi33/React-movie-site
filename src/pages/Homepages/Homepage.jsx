@@ -1,5 +1,6 @@
-import React from 'react'
-import Banner from './components/banner/Banner'
+import React from "react";
+import Banner from "./components/banner/Banner";
+import PopularMovieSlide from "./components/popularMovieSlide/PopularMovieSlide";
 
 // 만들어야 할 것.
 // 1. 배너(첫 번째 popular 영화꺼 들고오기)
@@ -10,9 +11,10 @@ import Banner from './components/banner/Banner'
 const Homepage = () => {
   return (
     <div>
-      <Banner/>
+      <Banner />
+      <PopularMovieSlide />
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
