@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import api from "../utils/api";
 
 const fetchPopularMovies = () => {
-    return api.get(`/movie/popular`);
+    return api.get(`/movie/popular?language=ko-KR`);
 }
 
 // 컴포넌트 훅 - 다른데에서도 가져다 쓰기 쉬움.

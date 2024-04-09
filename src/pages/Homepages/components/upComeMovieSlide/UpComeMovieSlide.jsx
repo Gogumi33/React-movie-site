@@ -1,11 +1,11 @@
 import React from "react";
-import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
+import { useUpComingMoviesQuery } from "../../../../hooks/useUpComingMovies";
 import { Alert } from "bootstrap";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../constants/responsive";
 
-const PopularMovieSlide = () => {
-  const { data, isLoading, isError, error } = usePopularMoviesQuery();
+const UpComeMovieSlide = () => {
+  const { data, isLoading, isError, error } = useUpComingMoviesQuery();
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -13,12 +13,12 @@ const PopularMovieSlide = () => {
   if (isError) {
     return <Alert varient="danger">{error.message}</Alert>;
   }
-
+  
   return (
     <div>
-      <MovieSlider title='🔥 불티나는 영화들' movies={data.results} responsive={responsive} />
+      <MovieSlider title='😃 Comming Soon!' movies={data.results} responsive={responsive} />
     </div>
   );
 };
 
-export default PopularMovieSlide;
+export default UpComeMovieSlide;

@@ -1,11 +1,11 @@
 import React from "react";
-import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
+import { useTopRatedMoviesQuery } from "../../../../hooks/useTopRateMovies";
 import { Alert } from "bootstrap";
 import MovieSlider from "../../../../common/MovieSlider/MovieSlider";
 import { responsive } from "../../../../constants/responsive";
 
-const PopularMovieSlide = () => {
-  const { data, isLoading, isError, error } = usePopularMoviesQuery();
+const TopRateMovieSlide = () => {
+  const { data, isLoading, isError, error } = useTopRatedMoviesQuery();
 
   if (isLoading) {
     return <h1>Loading...</h1>;
@@ -16,9 +16,9 @@ const PopularMovieSlide = () => {
 
   return (
     <div>
-      <MovieSlider title='🔥 불티나는 영화들' movies={data.results} responsive={responsive} />
+      <MovieSlider title='🏆 최고의 빛나는 영화들' movies={data.results} responsive={responsive} />
     </div>
   );
 };
 
-export default PopularMovieSlide;
+export default TopRateMovieSlide;
