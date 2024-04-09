@@ -5,7 +5,7 @@ import { useMovieGenreQuery } from '../../hooks/useMovieGenre';
 
 const MovieCard = ({movie}) => {
   const {data: genreData} = useMovieGenreQuery(); // 데이터 이름 재정의.
-  // console.log("ㅋㅋㅋ", genreData);
+
   const showGenre = (genreIdList) => {
     if(!genreData) return []; // 장르 데이터가 없다면 그냥 아무것도 안 보여주겠다.
     const genreNameList = genreIdList.map((id) => { // 장르의 이름만 보인 것들이 모일것이다.
