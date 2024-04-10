@@ -1,0 +1,29 @@
+.sort-section {
+  margin-bottom: 2em;
+}
+.genre-button button {
+  margin: 1em;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 2.8em 0;
+}
+.page-item .page-link {
+  background-color: #222222;
+  border: 1px solid #d5d5d5;
+  color: #ffffff;
+  cursor: pointer;
+}
+.page-item .page-link:hover {
+  background-color: #d2c9c4 !important;
+  color: #222222;
+}
+.disabled .page-link {
+  color: #444444;
+}
+.active .page-link {
+  border: 1px solid #d5d5d5;
+  background-color: #e745e2 !important;
+  color: #222222;
+}

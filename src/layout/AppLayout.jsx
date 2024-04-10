@@ -7,7 +7,8 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 import png from "../assets/netflix.PNG";
 
@@ -17,6 +18,18 @@ import png from "../assets/netflix.PNG";
 // 넷플릭스 로고 링크 - https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png
 
 const AppLayout = () => {
+  // 검색어 받아오는 state
+  const [keyword, setKeyword] = useState("");
+  const navigate = useNavigate();
+
+  const searchByKeyword = (event) => {
+    event.preventDefault(); // 자동 새로고침 방지.
+
+    // url 바꿔주기.
+    navigate(`/movies?q=${keyword}`);
+    setKeyword(""); // 검색창 비워주기.
+  }
+
   return (
     <div style={{background: 'black', color:'white'}}>
       <Navbar data-bs-theme="dark" expand="lg" className="bg-body-tertiary navigation_bar">
@@ -39,14 +52,16 @@ const AppLayout = () => {
               <Nav.Link href="/movies">Movies</Nav.Link>
             </Nav>
 
-            <Form className="d-flex">
+            <Form className="d-flex" onSubmit={searchByKeyword}>
               <Form.Control
                 type="search"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
+                value={keyword}
+                onChange={(event) => setKeyword(event.target.value)}
               />
-              <Button variant="outline-danger">Search</Button>
+              <Button variant="outline-danger" type="submit">search</Button>
             </Form>
           </Navbar.Collapse>
         </Container>
