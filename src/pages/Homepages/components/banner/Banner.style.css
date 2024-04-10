@@ -25,3 +25,23 @@
 .banner-text-area > * {
     z-index: 2;
 }
+
+@media screen and (max-width: 1200px) {
+    .banner-text-area {
+        width: 80%;
+        padding: 1em;
+    }
+    .banner-text-area h1 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .banner-text-area {
+        width: 100%;
+        padding: 1em;
+    }
+    .banner-text-area h1 {
+        font-size: 2em;
+    }
+}
