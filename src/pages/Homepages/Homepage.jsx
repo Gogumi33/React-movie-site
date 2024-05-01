@@ -1,3 +1,4 @@
+// 최종 홈페이지 -> 여기에 컴포넌트들 다 가져옴
 import React from "react";
 import Banner from "./components/banner/Banner";
 import PopularMovieSlide from "./components/popularMovieSlide/PopularMovieSlide";

@@ -31,3 +31,8 @@
         height: 350px;
     }
 }
+@media (min-width:1025px) {
+    .movie-card .overlay h1 {
+        font-size: 5vh;
+    }
+}
