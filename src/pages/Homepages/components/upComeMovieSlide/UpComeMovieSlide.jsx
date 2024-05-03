@@ -1,3 +1,4 @@
+// 곧 개봉할 영화들
 import React from "react";
 import { useUpComingMoviesQuery } from "../../../../hooks/useUpComingMovies";
 import { Alert } from "bootstrap";

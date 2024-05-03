@@ -1,3 +1,4 @@
+// 평점 top을 기록한 영화들
 import React from "react";
 import { useTopRatedMoviesQuery } from "../../../../hooks/useTopRateMovies";
 import { Alert } from "bootstrap";

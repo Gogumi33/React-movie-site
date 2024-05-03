@@ -1,3 +1,4 @@
+// 이 배너는 화면 바뀌어도 그대로
 import React from "react";
 import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
 import Alert from "react-bootstrap/Alert";

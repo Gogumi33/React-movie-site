@@ -1,3 +1,4 @@
+// 현재 인기있는 영화들
 import React from "react";
 import { usePopularMoviesQuery } from "../../../../hooks/usePopularMovies";
 import { Alert } from "bootstrap";
